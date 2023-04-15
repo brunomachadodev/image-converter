@@ -17,18 +17,6 @@ func main() {
 	inputFile :=os.Args[1]
 	outputFile := os.Args[2]
 
-	// input, err := os.Open(inputFile)
-	// if err != nil {
-	// 	fmt.Println(err)
-	// 	os.Exit(1)
-	// }
-
-	// img, _, err := image.Decode(input)
-	// if err != nil {
-	// 	fmt.Println("Error decoding input file:",err)
-	// 	os.Exit(1)
-	// }
-
 	img, err := imaging.Open(inputFile)
 	if err != nil {
     log.Fatalf("Error decoding input file: %s", err)
