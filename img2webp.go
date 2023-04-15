@@ -37,8 +37,7 @@ func main() {
 
 	output, err := os.Create(outputFile)
 	if err != nil {
-		fmt.Println("Error creating output file:",err)
-		os.Exit(1)
+		log.Fatalf("Error creating output file: %s", err)
 	}
 
 	options := &webp.Options{
@@ -46,8 +45,7 @@ func main() {
 	}
 	err = webp.Encode(output, img, options)
 	if err != nil {
-		fmt.Println("Error encoding image:",err)
-		os.Exit(1)
+		log.Fatalf("Error encoding image: %s", err)
 	}
 
 	fmt.Printf("Successfully converted %s to %s\n", inputFile, outputFile)
