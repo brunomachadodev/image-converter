@@ -22,4 +22,6 @@ image-converter /path/to/input.jpg /path/to/output.webp
 
 By default, the output WebP file will be compressed with 75% of quality. If you want to use another compression value, you can use the `-q` flag followed by a number between 0 and 100:
 
+```shell
 image-converter -q 80 /path/to/input.jpg /path/to/output.webp
+```
